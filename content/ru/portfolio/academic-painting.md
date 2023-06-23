@@ -1,7 +1,7 @@
 ---
 id: academic-painting
 group: 6
-title: Академический рисунок
+title: Academic painting
 date: 2022
 images:
 - 'arm'

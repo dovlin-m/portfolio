@@ -1,7 +1,7 @@
 ---
 id: graduation-project
 group: 7
-title: Дипломная работа
+title: Graduation project
 date: 2022
 images:
 - 'decoration'

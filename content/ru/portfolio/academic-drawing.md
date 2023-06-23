@@ -1,7 +1,7 @@
 ---
 id: academic-drawing
 group: 13
-title: Академическая живопись
+title: Academic drawing
 date: 2022
 images:
   - 'lemon'

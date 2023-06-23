@@ -1,7 +1,7 @@
 ---
 id: vera
 group: 13
-title: Серия эскизов "Вера"
+title: A series of sketches "Vera"
 date: 2022
 images:
 - 'vera_1'

@@ -1,7 +1,7 @@
 ---
 id: decorative-drawing
 group: 3
-title: Декоративный живопись
+title: Decorative drawing
 date: 2022
 images:
 - 'purple_man'

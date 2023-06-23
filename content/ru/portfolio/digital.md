@@ -1,7 +1,7 @@
 ---
 id: digital
 group: 1
-title: Диджитал
+title: Digital
 date: 2022
 images:
 - 'russian-girl'

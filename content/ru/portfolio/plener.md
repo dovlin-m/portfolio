@@ -1,7 +1,7 @@
 ---
 id: plener
 group: 5
-title: Пленэр
+title: Plener
 date: 2022
 images:
 - 'street'

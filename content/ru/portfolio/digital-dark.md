@@ -1,7 +1,7 @@
 ---
 id: digital-dark
 group: 2
-title: Диджитал dark
+title: Digital dark
 date: 2022
 images:
 - 'scared'

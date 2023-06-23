@@ -1,7 +1,7 @@
 ---
 id: course-sketch
 group: 8
-title: Курсы скетч
+title: Course sketch
 date: 2022
 images:
 - 'tree'

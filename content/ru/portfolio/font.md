@@ -1,7 +1,7 @@
 ---
 id: font
 group: 16
-title: Шрифты
+title: Fonts
 date: 2022
 images:
 - 'font_1'

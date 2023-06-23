@@ -1,7 +1,7 @@
 ---
 id: course-concept
 group: 4
-title: Курсы концепт
+title: Concept
 date: 2022
 images:
   - 'mask'
