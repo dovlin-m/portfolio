@@ -1,0 +1,43 @@
+.dropdown-box /deep/ .dropdown-wrapper {
+  left: calc(-50% - 12px / 2);
+  width: 90px;
+}
+
+.dropdown-box /deep/ .box {
+  width: 90px;
+
+  .rectangle {
+    left: calc(50% - 12px / 2);
+  }
+}
+
+.btn-locale {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.locale-dropdown {
+  position: relative;
+  display: inline-block;
+
+  .chevron {
+    transition: transform 150ms;
+
+    &-active {
+      transform: rotate(180deg);
+    }
+  }
+
+  .locale-dropdown-menu {
+    left: -67px;
+  }
+}
+
+.link-locale {
+  border-bottom: none;
+  &:hover {
+    padding-bottom: inherit;
+  }
+}

@@ -1,0 +1,27 @@
+<atoms-dropdown-box class="locale-dropdown" :active="active">
+  <template #button>
+    <button type="button" class="btn-locale d-flex pa-0" aria-label="Locale" @click="active = !active">
+      <p class="text-body text-uppercase ma-0" v-text="$i18n.locale" />
+
+      <span
+        class="chevron ml-1 d-flex align-items-center"
+        :class="{ 'chevron-active': active }"
+        v-html="require(`~/assets/images/icons/chevron.svg?include`)"
+      />
+    </button>
+  </template>
+
+  <template #dropdown-menu>
+    <template v-for="locale in $i18n.locales">
+      <component
+        :key="locale.code"
+        :is="locale.code === $i18n.locale ? 'span' : 'nuxt-link'"
+        :href="locale.code === $i18n.locale ? null : menuLinks[locale.code]"
+        :class="{ 'text-gray-500': locale.code !== $i18n.locale }"
+        :to="locale.code === $i18n.locale ? null : menuLinks[locale.code]"
+        class="link-locale link-none text-body d-block text-center py-2 ma-0"
+        v-text="locale.name"
+      />
+    </template>
+  </template>
+</atoms-dropdown-box>

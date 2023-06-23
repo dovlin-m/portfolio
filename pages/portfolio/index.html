@@ -1,0 +1,35 @@
+<div class="container pt-header">
+  <div class="my-8 my-sm-12 my-lg-16">
+    <h1 v-text="$t('pages.index.title')" />
+
+    <div>
+      <div
+        v-for="({ title, date, slug, images }) in portfolio" :key="title"
+        class="darker rounded-2 pa-2 pa-sm-4 pa-lg-6 mt-8"
+      >
+        <div class="d-flex align-items-center mb-6">
+          <atoms-logo logo-min large class="mr-3 mr-sm-4" />
+
+          <h2 class="text-gray mb-0" v-text="title" />
+        </div>
+
+        <div class="d-flex flex-wrap row-gap-4 column-gap-4">
+          <molecules-card-image
+            v-for="img in images" :key="img"
+            :img="`${slug}/${img}`"
+          />
+        </div>
+
+        <div class="d-flex jc-space-between align-items-center mt-4">
+          <nuxt-link
+            class="text-body text-muted"
+            :to="localePath({ name: 'index-slug', params: { slug } })"
+            v-text="$t('links.detailed')"
+          />
+
+          <p class="text-small text-right text-muted" v-text="date" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

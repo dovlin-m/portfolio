@@ -1,0 +1,26 @@
+<div class="container pt-header">
+  <div class="my-4 my-lg-8">
+    <h1 v-text="page.title" />
+
+    <div>
+      <atoms-grid-row>
+        <atoms-grid-row v-for="(img, index) in page.images" :key="img">
+          <img
+            :src="require(`~/assets/images/portfolio/${page.slug}/${img}.jpg?webp`)"
+            class="image fit-cover col-sm-6 rounded-2"
+            :class="index % 2 === 0 ? 'order-0' : 'order-1'"
+            width="100%"
+            :alt="img"
+          />
+
+          <div
+            class="gray-200 rounded-2 col-sm-6 pa-8"
+            :class="index % 2 !== 0 ? 'order-0' : 'order-1'"
+          >
+            descriptions
+          </div>
+        </atoms-grid-row>
+      </atoms-grid-row>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $f-inter;
+  overflow-x: hidden;
+}
+
+code {
+  display: block;
+  white-space: pre-wrap;
+}
+
+.layout {
+  $transition: 100ms;
+
+  &-enter {
+    opacity: 0;
+    &-active {
+      transition: opacity $transition;
+    }
+  }
+
+  &-leave-active {
+    opacity: 0;
+    transition: opacity $transition;
+  }
+}
+
+// facebook is too high
+.fb_dialog {
+  z-index: 100 !important;
+}
+
+// removes chrome blueish background on autofill
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px $c-white inset !important;
+}
+
+.container {
+  padding: 0 20px;
+  @include respond-to(from-tablet-small) {
+    padding: 0 35px;
+  }
+  @include respond-to(from-desktop-small) {
+    max-width: $container;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
+
+.container-wrapper {
+  padding: 0 16px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @media #{map-get($display-breakpoints, 'sm')} {
+    padding: 0 32px;
+    max-width: map-get($breakpoints, '-lg-');
+  }
+
+  &-small {
+    padding: 0 16px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @media #{map-get($display-breakpoints, 'lg')} {
+      padding: 0 32px;
+      max-width: 816px;
+    }
+  }
+}
+
+.content {
+  @include respond-to(from-tablet-small) {
+    padding: 0;
+  }
+}
+
+.h-fit-content {
+  height: fit-content;
+}
+
+ol,
+li,
+ul,
+p {
+  @include text('14px', '20px');
+
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    @include text('12px', '18px');
+  }
+  margin: 0;
+}
+
+.strong,
+strong {
+  font-weight: 600;
+}
+
+.text--primary {
+  color: $c-primary;
+}
+
+svg * {
+  vector-effect: non-scaling-stroke;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: $box-shadow;
+}
+
+.shadow-none {
+  box-shadow: none;
+}
+
+.border-bottom-none {
+  border-bottom: none;
+}
+
+.border-line-1 {
+  border: 1px solid map-get($colors, 'gray-200');
+}
+
+.p-relative {
+  position: relative;
+}
