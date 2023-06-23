@@ -1,5 +1,5 @@
 ---
-id: 1
+id: digital
 group: 1
 title: Digital
 date: 2022

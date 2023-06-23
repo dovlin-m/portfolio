@@ -1,5 +1,5 @@
 ---
-id: 8
+id: course-sketch
 group: 8
 title: Курсы скетч
 date: 2022

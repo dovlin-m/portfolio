@@ -1,5 +1,5 @@
 ---
-id: 12
+id: room
 group: 14
 title: Комната
 date: 2022

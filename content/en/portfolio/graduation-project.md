@@ -1,5 +1,5 @@
 ---
-id: 3
+id: graduation-project
 group: 7
 title: Graduation project
 date: 2022

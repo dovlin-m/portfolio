@@ -1,5 +1,5 @@
 ---
-id: 16
+id: academic-head
 group: 16
 title: Рисунок головы
 date: 2022

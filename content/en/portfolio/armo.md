@@ -1,5 +1,5 @@
 ---
-id: 11
+id: armo
 group: 11
 title: '"Armo" - hockey team'
 date: 2022

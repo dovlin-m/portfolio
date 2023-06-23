@@ -24,7 +24,8 @@ export default defineComponent({
 
       <div>
         <div
-          v-for="({ title, date, slug, images }) in portfolio"
+          v-for="({ title, date, slug, images, id }) in portfolio"
+          :id="id"
           :key="title"
           class="darker pa-2 pa-sm-4 pa-lg-6 mt-8"
         >

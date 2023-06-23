@@ -1,5 +1,5 @@
 ---
-id: 4
+id: academic-painting
 group: 6
 title: Академический рисунок
 date: 2022

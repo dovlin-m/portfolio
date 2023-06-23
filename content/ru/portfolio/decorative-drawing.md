@@ -1,5 +1,5 @@
 ---
-id: 5
+id: decorative-drawing
 group: 3
 title: Декоративный живопись
 date: 2022

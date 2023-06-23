@@ -1,5 +1,5 @@
 ---
-id: 13
+id: academic-drawing
 group: 13
 title: Академическая живопись
 date: 2022

@@ -11,7 +11,7 @@ export default defineComponent({
 
   async fetch () {
     this.menu =
-      await this.$content(`${this.$i18n.locale}/portfolio`, { deep: true }).only(['title']).fetch();
+      await this.$content(`${this.$i18n.locale}/portfolio`, { deep: true }).only(['id', 'title']).fetch();
     console.log('title', this.menu);
   },
 
@@ -32,6 +32,15 @@ export default defineComponent({
   methods: {
     handleScroll () {
       this.active = false;
+    },
+
+    scrollToBottom (id) {
+      const item = document.getElementById(id);
+
+      if (item) {
+        item.scrollIntoView({ behavior: 'smooth' });
+        this.active = false;
+      }
     },
   },
 });

@@ -1,5 +1,5 @@
 ---
-id: 10
+id: yoga
 group: 10
 title: Йога - брэнд одежды
 date: 2022

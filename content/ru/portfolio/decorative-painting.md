@@ -1,5 +1,5 @@
 ---
-id: 18
+id: decorative-painting
 group: 18
 title: Декоративный рисунок
 date: 2022

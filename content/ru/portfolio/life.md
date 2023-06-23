@@ -1,5 +1,5 @@
 ---
-id: 2
+id: life
 group: 9
 title: '"Жизнь"'
 date: 2022

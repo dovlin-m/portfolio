@@ -1,5 +1,5 @@
 ---
-id: 17
+id: decorative-sketch
 group: 15
 title: Декоративные наброски
 date: 2022

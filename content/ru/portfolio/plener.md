@@ -1,5 +1,5 @@
 ---
-id: 6
+id: plener
 group: 5
 title: Пленэр
 date: 2022

@@ -1,5 +1,5 @@
 ---
-id: 3
+id: graduation-project
 group: 7
 title: Дипломная работа
 date: 2022

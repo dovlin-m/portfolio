@@ -17,10 +17,10 @@
   </template>
 
   <template #dropdown-menu>
-    <nuxt-link
-      v-for="category of project" :key="category.title"
-      v-text="category.title"
-      :to="category.href"
+    <button
+      v-for="{ id, title } of menu" :key="title"
+      v-text="title"
+      @click="scrollToBottom(id)"
       class="btn-menu-profile text-body link-profile py-2 px-4 ma-0"
     />
 

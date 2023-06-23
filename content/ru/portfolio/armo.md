@@ -1,5 +1,5 @@
 ---
-id: 11
+id: armo
 group: 11
 title: '"Armo" - хоккейная команда'
 date: 2022

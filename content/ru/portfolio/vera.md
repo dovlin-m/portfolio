@@ -1,5 +1,5 @@
 ---
-id: 14
+id: vera
 group: 13
 title: Серия эскизов "Вера"
 date: 2022

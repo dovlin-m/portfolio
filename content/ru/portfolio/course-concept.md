@@ -1,5 +1,5 @@
 ---
-id: 9
+id: course-concept
 group: 4
 title: Курсы концепт
 date: 2022

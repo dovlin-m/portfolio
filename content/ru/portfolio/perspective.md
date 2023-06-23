@@ -1,5 +1,5 @@
 ---
-id: 15
+id: perspective
 group: 17
 title: Перспектива
 date: 2022
