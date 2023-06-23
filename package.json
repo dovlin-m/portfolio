@@ -5,7 +5,9 @@
     "dev": "npx nuxt",
     "start": "npx nuxt start",
     "build": "npx nuxt build",
-    "build:analyze": "npm run build -- --analyze"
+    "build:analyze": "npm run build -- --analyze",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@luxdamore/nuxt-prune-html": "^2.0.6",
