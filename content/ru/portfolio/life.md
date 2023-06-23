@@ -1,12 +1,14 @@
 ---
-id: 1
-group: 1
-title: Дипломный проект
+id: 2
+group: 9
+title: '"Жизнь"'
 date: 2022
 images:
-- 'russian-girl'
-- 'tomato'
-- 'lemon'
-- 'grandmother_and_cat'
-- 'mouse_girl'
+- 'life'
+- 'main'
+- 'frontal_perspective'
+- 'scan'
+- 'walls'
+- 'exhibits'
+- 'sketch'
 ---

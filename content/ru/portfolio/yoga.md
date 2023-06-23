@@ -1,16 +1,20 @@
 ---
-id: 1
-group: 1
-title: Диджитал
+id: 10
+group: 10
+title: Йога - брэнд одежды
 date: 2022
 images:
-- 'russian-girl'
-- 'tomato'
-- 'lemon'
-- 'grandmother_and_cat'
-- 'grandparents'
-- 'girl_on_case'
-- 'mouse_girl'
-- 'girl_yoga'
-- 'vera'
+- 'banner'
+- 'font'
+- 'palette'
+- 'gazelle'
+- 'logo_1'
+- 'logo_2'
+- 'logo_3'
+- 'logo_4'
+- 'logo_5'
+- 'logo_7'
+- 'logo_8'
+- 'gazelle_3d'
+- 'sketch'
 ---

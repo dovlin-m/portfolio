@@ -1,7 +1,7 @@
 ---
 id: 17
-group: 17
-title: Декоративные наброски
+group: 15
+title: Decorative sketch
 date: 2022
 images:
 - 'crying_girl'

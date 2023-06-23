@@ -4,12 +4,12 @@ group: 13
 title: Academic drawing
 date: 2022
 images:
-- 'arm'
-- 'foot'
-- 'flower'
-- 'duck'
-- 'sketch_3'
-- 'girl_background_yellow'
-- 'red_blue'
-- 'lemon'
+  - 'lemon'
+  - 'red_blue'
+  - 'sketch_3'
+  - 'girl_background_yellow'
+  - 'flower'
+  - 'duck'
+  - 'arm'
+  - 'foot'
 ---

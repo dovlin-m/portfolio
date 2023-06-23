@@ -1,7 +1,7 @@
 ---
 id: 18
 group: 18
-title: Декоративный рисунок
+title: Decorative painting
 date: 2022
 images:
 - 'sketch'

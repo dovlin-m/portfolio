@@ -1,3 +1,3 @@
 export const links = {
-  detailed: 'Подробнее',
+  detailed: 'More detailed',
 };

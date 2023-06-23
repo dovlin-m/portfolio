@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="gray">
     <organisms-header />
 
     <nuxt />
@@ -15,3 +15,6 @@ export default defineComponent({
   name: 'DefaultLayouts',
 });
 </script>
+
+<style lang="scss">
+</style>

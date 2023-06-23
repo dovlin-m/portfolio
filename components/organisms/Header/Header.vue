@@ -1,15 +1,17 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { NavOption } from '@/utils/types/nav';
+import { NavMenu } from './Header.utils';
 
 export default defineComponent({
-  name: 'MoleculesCardLocaleDropdown',
+  name: 'OrganismsHeader',
 
   data: () => ({
-    active: false,
+    menu: NavMenu as NavOption,
   }),
 
   computed: {
-    menuLinks (): any {
+    menuLocale (): any {
       return this.$i18n.locales.map(item => item.code).reduce((prev, locale) => {
         const { query, params } = this.$route;
         const opts = { name: this.getRouteBaseName(), params, query };
@@ -19,23 +21,8 @@ export default defineComponent({
       }, {});
     },
   },
-
-  beforeMount () {
-    this.active = false;
-    window.addEventListener('scroll', this.handleScroll);
-    // eslint-disable-next-line no-return-assign
-    const onClickOutside = e => this.active = this.$el.contains(e.target) && this.active;
-    document.addEventListener('click', onClickOutside);
-    this.$on('hook:beforeDestroy', () => document.removeEventListener('click', onClickOutside));
-  },
-
-  methods: {
-    handleScroll () {
-      this.active = false;
-    },
-  },
 });
 </script>
 
-<template src="./LocaleDropdown.html" />
-<style src="./LocaleDropdown.scss" lang="scss" scoped />
+<template src="./Header.html" />
+<style src="./Header.scss" lang="scss" scoped />

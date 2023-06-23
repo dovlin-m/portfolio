@@ -1,12 +1,18 @@
 ---
-id: 1
-group: 1
-title: Диджитал
+id: 6
+group: 5
+title: Пленэр
 date: 2022
 images:
-- 'russian-girl'
-- 'tomato'
-- 'lemon'
-- 'grandmother_and_cat'
-- 'mouse_girl'
+- 'street'
+- 'dog'
+- 'children_in_ghetto'
+- 'balcony'
+- 'sketch'
+- 'church'
+- 'street_2'
+- 'lake'
+- 'girl'
+- 'rabbit'
+- 'sketch_2'
 ---

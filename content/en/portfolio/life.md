@@ -1,7 +1,7 @@
 ---
 id: 2
-group: 2
-title: Жизнь
+group: 9
+title: '"Life"'
 date: 2022
 images:
 - 'life'

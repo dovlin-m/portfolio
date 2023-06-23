@@ -1,6 +1,6 @@
 ---
 id: 4
-group: 4
+group: 6
 title: Академический рисунок
 date: 2022
 images:

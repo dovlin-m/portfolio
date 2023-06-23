@@ -1,7 +1,7 @@
 ---
 id: 15
-group: 15
-title: Перспектива
+group: 17
+title: Perspective
 date: 2022
 images:
 - 'sketch_1'

@@ -1,16 +1,15 @@
 ---
-id: 1
-group: 1
-title: Диджитал
+id: 9
+group: 4
+title: Курсы концепт
 date: 2022
 images:
-- 'russian-girl'
-- 'tomato'
-- 'lemon'
-- 'grandmother_and_cat'
-- 'grandparents'
-- 'girl_on_case'
-- 'mouse_girl'
-- 'girl_yoga'
-- 'vera'
+  - 'mask'
+  - 'house'
+  - 'girl_sketch'
+  - 'snail'
+  - 'pigeon'
+  - 'characters'
+  - 'perspective'
+  - 'house_cactus'
 ---

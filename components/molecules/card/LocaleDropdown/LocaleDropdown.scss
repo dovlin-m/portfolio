@@ -1,26 +1,43 @@
-.dropdown-box {
+.dropdown-box /deep/ .dropdown-wrapper {
+  left: calc(-50% - 12px / 2);
+  width: 90px;
+}
+
+.dropdown-box /deep/ .box {
+  width: 90px;
+
+  .rectangle {
+    left: calc(50% - 12px / 2);
+  }
+}
+
+.btn-locale {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.locale-dropdown {
   position: relative;
   display: inline-block;
 
-  .dropdown-wrapper {
-    position: absolute;
-    padding-top: 25px;
-    z-index: 1;
+  .chevron {
+    transition: transform 150ms;
+
+    &-active {
+      transform: rotate(180deg);
+    }
   }
 
-  .box {
-    position: absolute;
+  .locale-dropdown-menu {
+    left: -67px;
+  }
+}
 
-    .rectangle {
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      top: -6px;
-      transform: rotate(45deg);
-    }
-
-    .rectangle.shadow {
-      z-index: -1;
-    }
+.link-locale {
+  border-bottom: none;
+  &:hover {
+    padding-bottom: inherit;
   }
 }

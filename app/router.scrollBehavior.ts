@@ -7,6 +7,7 @@ export default function (to, from, saved) {
   }
 
   if (to.hash) {
+    // @ts-ignore
     target = { selector: to.hash };
   }
 

@@ -35,7 +35,8 @@
       "@nuxt/typescript-build",
       "@types/node",
       "@nuxtjs/i18n",
-      "nuxt-viewport"
+      "nuxt-viewport",
+      "@nuxt/content"
     ]
   },
   "include": [

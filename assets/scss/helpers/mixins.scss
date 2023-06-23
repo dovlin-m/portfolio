@@ -1,214 +1,63 @@
-@import './variables';
-
-@mixin clearfix {
-  &::before,
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-
-@mixin noclearfix {
-  &::before,
-  &::after {
-    content: none;
-  }
-}
-
-@mixin optional-at-root($sel) {
-  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
-    @content;
-  }
-}
-
-@mixin placeholder {
-  @include optional-at-root('::-webkit-input-placeholder') {
-    @content;
-  }
-
-  @include optional-at-root(':-moz-placeholder') {
-    @content;
-  }
-
-  @include optional-at-root('::-moz-placeholder') {
-    @content;
-  }
-
-  @include optional-at-root(':-ms-input-placeholder') {
-    @content;
-  }
-}
-
-@mixin font(
-  $name,
-  $size: '16px',
-  $weight: 'normal',
-  $line-height: '1.5',
-  $style: 'normal'
-) {
-  font-family: $name;
-  font-size: if(type-of($size) == string, unquote($size), $size);
-  font-weight: if(type-of($weight) == string, unquote($weight), $weight);
-  font-style: if(type-of($style) == string, unquote($style), $style);
-  line-height: if(
-    type-of($line-height) == string,
-    unquote($line-height),
-    $line-height
-  );
-}
-
-@mixin respond-to($media) {
-  @if $media == tablet-landscape {
-    @media only screen and (max-width: $break-tablet_landscape - 1) {
-      @content;
-    }
-  } @else if $media == tablet-portrait {
-    @media only screen and (max-width: $break-tablet_portrait - 1) {
-      @content;
-    }
-  } @else if $media == mobile {
-    @media only screen and (max-width: $break-mobile - 1) {
-      @content;
-    }
-  }
-
-  /** a bit more semantic queries */
-  // we dont use from-mobile since its mobile first already? or you could but it would make little sense
-  @else if ($media == /* apply style */ from-mobile-large /* and up */) {
-    @media only screen and (min-width: $mb-break-mobile-small) {
-      @content;
-    }
-  } @else if ($media == /* apply style */ from-tablet-small /* and up */) {
-    @media only screen and (min-width: $mf-break-mobile-large) {
-      @content;
-    }
-  } @else if ($media == /* apply style */ from-tablet-large /* and up */) {
-    @media only screen and (min-width: $mf-break-tablet-small) {
-      @content;
-    }
-  } @else if ($media == /* apply style */ from-desktop-small /* and up */) {
-    @media only screen and (min-width: $mf-break-tablet-large) {
-      @content;
-    }
-  } @else if ($media == /* apply style */ from-desktop-large /* and up */) {
-    @media only screen and (min-width: $mf-break-desktop-small) {
-      @content;
-    }
-  } @else if ($media == /* apply style */ from-hd /* and up */) {
-    @media only screen and (min-width: $mf-break-desktop-large) {
-      @content;
-    }
-  }
-}
-
-@mixin landing-calculator-container {
-  @include respond-to(from-tablet-small) {
-    margin: auto;
-    width: $calculator-width;
-  }
-
-  @include respond-to(from-desktop-small) {
-    margin: inherit;
-    width: calc(#{$mf-break-tablet-large + 40px} * #{$right-block});
-  }
-
-  @include respond-to(from-desktop-large) {
-    width: calc(#{$mf-break-tablet-large} * #{$right-block});
-  }
-
-  @include respond-to(from-hd) {
-    width: calc(#{$mf-break-tablet-large - 40px} * #{$right-block});
-  }
-
-  @media only screen and (min-width: 2200px) {
-    width: calc(#{$mf-break-tablet-large - 80px} * #{$right-block});
-  }
-}
-
-// Redesign
-
 // Text
-@mixin text($size: '16px', $line-height: '24px', $bottom: '16px') {
+@mixin text($size: '16px', $line-height: '24px', $weight: '400') {
   font-size: if(type-of($size) == string, unquote($size), $size);
   line-height: if(
-    type-of($line-height) == string,
-    unquote($line-height),
-    $line-height
+      type-of($line-height) == string,
+      unquote($line-height),
+      $line-height
   );
-  margin-bottom: if(type-of($bottom) == string, unquote($bottom), $bottom);
+  font-weight: if(type-of($weight) == string, unquote($weight), $weight);
 }
 
 // H1
 @mixin text-h1 {
-  @include text('36px', '47px', '24px');
+  @include text('48px', '52px', '800');
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    @include text('30px', '39px', '16px');
+    @include text('36px', '42px', '800');
   }
 }
 
 // H2
 @mixin text-h2 {
-  @include text('30px', '41px', '24px');
+  @include text('36px', '42px', '800');
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    @include text('21px', '28px', '16px');
+    @include text('28px', '34px', '800');
   }
 }
 
 // H3
 @mixin text-h3 {
-  @include text('21px', '29px', '24px');
+  @include text('28px', '34px', '800');
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    @include text('16px', '22px', '16px');
+    @include text('20px', '24px', '800');
   }
 }
 
 // H4
 @mixin text-h4 {
-  @include text('16px', '23px', '16px');
+  @include text('16px', '23px', '800');
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    @include text('14px', '20px', '16px');
+    @include text('14px', '20px', '800');
   }
 }
 
 // Lead
 @mixin text-lead {
-  @include text('16px', '23px', '16px');
-
-  @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    @include text('14px', '20px', '8px');
-  }
+  @include text('20px', '28px');
 }
 
 // Body
 @mixin text-body {
-  @include text('14px', '20px', '8px');
-
-  @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    @include text('12px', '18px', '4px');
-  }
+  @include text('16px', '24px');
 }
 
 // Small
 @mixin text-small {
-  @include text('12px', '19px', '8px');
-
-  @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    @include text('10px', '16px', '4px');
-  }
-}
-
-// Caption
-@mixin text-caption {
-  @include text('10px', '16px', '8px');
-
-  @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    @include text('8px', '13px', '4px');
-  }
+  @include text('14px', '20px');
 }
 
 // Spacing

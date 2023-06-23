@@ -1,7 +1,7 @@
 ---
 id: 14
-group: 14
-title: Серия эскизов "Вера"
+group: 13
+title: A series of sketches "Vera"
 date: 2022
 images:
 - 'vera_1'

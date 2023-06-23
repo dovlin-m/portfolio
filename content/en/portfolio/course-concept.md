@@ -1,15 +1,15 @@
 ---
 id: 9
-group: 9
-title: Концепт
+group: 4
+title: Concept
 date: 2022
 images:
-- 'girl_and_house'
-- 'characters'
-- 'perspective'
-- 'pigeon'
-- 'green_mask'
-- 'mask'
-- 'house_cactus'
-- 'snail'
+  - 'mask'
+  - 'house'
+  - 'girl_sketch'
+  - 'snail'
+  - 'pigeon'
+  - 'characters'
+  - 'perspective'
+  - 'house_cactus'
 ---

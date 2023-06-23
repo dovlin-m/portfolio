@@ -22,7 +22,7 @@ const head = {
       { name: 'format-detection', hid: 'format-detection', content: 'date=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'Image/x-icon', href: '/favicon.ico' },
     ],
   },
 };
@@ -41,7 +41,9 @@ const router = {
 
 const target = 'static';
 
-const plugins = [];
+const plugins = [
+  { src: '@/plugins/i18n' },
+];
 
 const components = true;
 
@@ -56,6 +58,8 @@ const modules = [
   '@nuxtjs/i18n',
   'nuxt-webfontloader',
   'nuxt-viewport',
+  '@nuxt/content',
+  'cookie-universal-nuxt',
 ];
 
 const build = {
@@ -102,7 +106,7 @@ const i18n = {
       name: 'English',
       code: 'en',
       iso: 'en-GB',
-      file: 'en.js',
+      file: 'en.ts',
     },
     {
       name: 'Русский',
@@ -130,18 +134,17 @@ const i18n = {
 
 const viewport = {
   breakpoints: {
-    small: 768,
-    large: 1220,
+    xs: 0,
+    sm: 768,
+    lg: 1220,
   },
-
-  cookieName: 'viewport',
 
   defaultBreakpoints: {
-    small: 'small',
-    large: 'large',
+    lg: 'lg',
+    sm: 'sm',
   },
 
-  fallbackBreakpoint: 'large',
+  fallbackBreakpoint: 'lg',
 };
 
 const optimizedImages = {

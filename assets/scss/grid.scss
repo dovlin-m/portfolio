@@ -17,12 +17,16 @@
   }
 }
 
-// Grid-row-gap
-.grid-row-gap {
-  grid-row-gap: 24px;
-
-  @media #{map-get($display-breakpoints, 'xs-and-down')} {
-    grid-row-gap: 16px;
+// Gap
+@each $breakpoints, $b in $breakpoints {
+  @each $gap, $g in $gap {
+    @for $i from 0 through 24 {
+      @media (min-width: $b) {
+        .#{$gap}-gap#{$breakpoints}#{$i} {
+          #{$gap}-gap: $i * 4px;
+        }
+      }
+    }
   }
 }
 

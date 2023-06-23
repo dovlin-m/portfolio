@@ -1,6 +1,6 @@
 <div class="container pt-header">
   <div class="my-8 my-sm-12 my-lg-16">
-    <h1 v-text="$t('pages.index.title')" />
+    <h1 v-text="$t('pages.portfolio.title')" />
 
     <div>
       <div
@@ -23,7 +23,7 @@
         <div class="d-flex jc-space-between align-items-center mt-4">
           <nuxt-link
             class="text-body text-muted"
-            :to="localePath({ name: 'index-slug', params: { slug } })"
+            :to="localePath({ name: 'portfolio-slug', params: { slug } })"
             v-text="$t('links.detailed')"
           />
 

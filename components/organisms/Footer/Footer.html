@@ -1,31 +1,17 @@
-<div class="header">
+<div class="gray">
   <div class="container">
-    <header class="d-flex jc-space-between">
-      <atoms-logo />
-
-      <div class="d-flex align-items-center">
-        <div class="d-flex jc-center column-gap-2 mr-4">
-          <template v-for="locale in $i18n.locales">
-            <component
-              :is="locale.code === $i18n.locale ? 'span' : 'nuxt-link'"
-              :key="locale.code"
-              :href="locale.code === $i18n.locale ? null : menuLocale[locale.code]"
-              :class="{ 'text-bold': locale.code === $i18n.locale }"
-              :to="locale.code === $i18n.locale ? null : menuLocale[locale.code]"
-              class="link-locale link-none text-uppercase text-small"
-              v-text="locale.code"
-            />
-          </template>
-        </div>
-
-        <nuxt-link
-          v-for="{ id, nuxtHref } of menu" :key="id"
-          class="text-body ml-2 mb-0"
-          :to="localePath(nuxtHref)"
-          active-class="active"
-          v-text="$t(`header.${id}`)"
-        />
-      </div>
-    </header>
+    <div class="d-flex jc-center column-gap-6 pa-6 pa-sm-8 pa-lg-12">
+      <a
+        class="text-body text-darker"
+        href="mailto:mariia@antipov.me"
+        v-text="'mariia@antipov.me'"
+      />
+      <a
+        class="text-body text-darker"
+        href="tel:79814435892"
+        v-text="'+7 (981) 443 58 92'"
+      />
+      <p class="text-body" v-text="'Artstation'" />
+    </div>
   </div>
 </div>

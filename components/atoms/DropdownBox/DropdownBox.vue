@@ -1,13 +1,16 @@
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator';
+import { defineComponent } from 'vue';
 
-@Component({
-  name: 'atoms-dropdown-box',
-})
+export default defineComponent({
+  name: 'AtomsDropdownBox',
 
-export default class AtomsDropdownBox extends Vue {
-  @Prop({ default: false }) active!: boolean;
-}
+  props: {
+    active: {
+      type: Boolean,
+      default: false,
+    },
+  },
+});
 </script>
 
 <template src="./DropdownBox.html" />

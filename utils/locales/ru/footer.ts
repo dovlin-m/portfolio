@@ -1,4 +1,3 @@
-export const header = {
-  portfolio: 'Портфолио',
-  resume: 'Резюме',
+export const footer = {
+  email: 'email',
 };

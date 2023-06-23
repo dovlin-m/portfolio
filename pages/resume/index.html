@@ -1,22 +1,5 @@
-<div class="container">
+<div class="container pt-header">
   <div class="my-8 my-sm-12 my-lg-16">
-    <h1 v-text="$t('pages.portfolio.title')" />
-
-    <div>
-      <div class="gray-200 rounded-2 pa-8">
-        <div class="d-flex align-items-center mb-6">
-          <div class="logo-min gray-500 rounded-circle pa-2 pa-sm-4 pa-lg-6 mr-6" />
-          <h2 class="mb-0" v-text="'Name image group'" />
-        </div>
-
-        <atoms-grid-row>
-          <div
-            v-for="item in 6" :key="item"
-            class="col-sm-4 rounded-2 primary-500 pa-4"
-            v-text="`image ${item}`"
-          />
-        </atoms-grid-row>
-      </div>
-    </div>
+    <h1 v-text="$t('pages.resume.title')" />
   </div>
 </div>

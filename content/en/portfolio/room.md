@@ -1,7 +1,7 @@
 ---
 id: 12
-group: 12
-title: Комната
+group: 14
+title: Room
 date: 2022
 images:
 - 'banner'

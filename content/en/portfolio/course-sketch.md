@@ -1,7 +1,7 @@
 ---
 id: 8
 group: 8
-title: Диджитал
+title: Course sketch
 date: 2022
 images:
 - 'tree'

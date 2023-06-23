@@ -6,47 +6,6 @@
   }
 }
 
-// back-partial
-
-.back-partial,
-.back-partial-reverse {
-  background: map-get($colors, 'gray-100');
-
-  @media #{map-get($display-breakpoints, 'sm')} {
-    position: relative;
-    background: none;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-
-      background: map-get($colors, 'gray-100');
-
-      z-index: -1000;
-    }
-  }
-}
-
-.back-partial {
-  @media #{map-get($display-breakpoints, 'sm')} {
-    &::before {
-      left: 0;
-      right: 22%;
-    }
-  }
-}
-
-.back-partial-reverse {
-  @media #{map-get($display-breakpoints, 'sm')} {
-    &::before {
-      left: 22%;
-      right: 0;
-    }
-  }
-}
-
 // COLOR
 @each $colors, $c in $colors {
   .text-#{$colors} {

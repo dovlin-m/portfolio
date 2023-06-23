@@ -1,27 +1,31 @@
-<atoms-dropdown-box class="locale-dropdown" :active="active">
-  <template #button>
-    <button type="button" class="btn-locale d-flex pa-0" aria-label="Locale" @click="active = !active">
-      <p class="text-body text-uppercase ma-0" v-text="$i18n.locale" />
+<div class="header">
+  <div class="container">
+    <header class="d-flex jc-space-between">
+      <atoms-logo />
 
-      <span
-        class="chevron ml-1 d-flex align-items-center"
-        :class="{ 'chevron-active': active }"
-        v-html="require(`~/assets/images/icons/chevron.svg?include`)"
-      />
-    </button>
-  </template>
+      <div class="d-flex align-items-center row-gap-3">
+        <div class="d-flex jc-center column-gap-2">
+          <template v-for="locale in $i18n.locales">
+            <component
+              :is="locale.code === $i18n.locale ? 'span' : 'nuxt-link'"
+              :key="locale.code"
+              :href="locale.code === $i18n.locale ? null : menuLocale[locale.code]"
+              :class="{ 'text-bold': locale.code === $i18n.locale }"
+              :to="locale.code === $i18n.locale ? null : menuLocale[locale.code]"
+              class="link-locale link-none text-uppercase text-small"
+              v-text="locale.code"
+            />
+          </template>
+        </div>
 
-  <template #dropdown-menu>
-    <template v-for="locale in $i18n.locales">
-      <component
-        :key="locale.code"
-        :is="locale.code === $i18n.locale ? 'span' : 'nuxt-link'"
-        :href="locale.code === $i18n.locale ? null : menuLinks[locale.code]"
-        :class="{ 'text-gray-500': locale.code !== $i18n.locale }"
-        :to="locale.code === $i18n.locale ? null : menuLinks[locale.code]"
-        class="link-locale link-none text-body d-block text-center py-2 ma-0"
-        v-text="locale.name"
-      />
-    </template>
-  </template>
-</atoms-dropdown-box>
+        <nuxt-link
+          v-for="{ id, nuxtHref } of menu" :key="id"
+          class="text-body ml-2 mb-0"
+          :to="localePath(nuxtHref)"
+          active-class="active"
+          v-text="$t(`header.${id}`)"
+        />
+      </div>
+    </header>
+  </div>
+</div>

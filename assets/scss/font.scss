@@ -5,7 +5,7 @@ h4 {
   margin-top: 0;
   font-family: $f-inter;
   font-weight: 600;
-  color: map-get($colors, 'base-black');
+  color: map-get($colors, 'darker');
 }
 
 .text-h1,
@@ -13,8 +13,7 @@ h4 {
 .text-h3,
 .text-h4 {
   font-family: $f-inter;
-  font-weight: 600;
-  color: map-get($colors, 'base-black');
+  color: map-get($colors, 'darker');
 }
 
 .text-lead,
@@ -23,7 +22,7 @@ h4 {
 .text-caption {
   font-family: $f-inter;
   font-weight: 400;
-  color: map-get($colors, 'gray-900');
+  color: map-get($colors, 'dark');
 }
 
 .text-lead-bold,
@@ -137,32 +136,6 @@ h4,
   }
 }
 
-// Caption
-.text-caption {
-  @include text-caption;
-}
-
-@each $breakpoints, $b in $breakpoints {
-  @media (min-width: $b) {
-    .text-caption-#{$breakpoints} {
-      @include text-caption;
-    }
-  }
-}
-
-// Caption-bold
-.text-caption-bold {
-  @include text-caption;
-}
-
-@each $breakpoints, $b in $breakpoints {
-  @media (min-width: $b) {
-    .text-caption-#{$breakpoints}-bold {
-      @include text-caption;
-    }
-  }
-}
-
 // ul --- li
 ul {
   padding-left: 32px;
@@ -267,20 +240,23 @@ ul {
 
 a {
   padding-bottom: 1px;
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 19px;
+
+  color: map-get($colors, 'darker');
   text-decoration: none;
-  color: map-get($colors, 'primary-700');
-  border-bottom: 1px solid map-get($colors, 'primary-700');
+  cursor: pointer;
 
   &:hover {
-    padding-bottom: 2px;
-    color: map-get($colors, 'primary-600');
-    border-bottom: none;
+    padding-bottom: 0;
+    border-bottom: 1px solid;
   }
 
-  &:active {
-    padding-bottom: 1px;
-    color: map-get($colors, 'primary-900');
-    border-bottom: 1px solid map-get($colors, 'primary-900');
+  &.active {
+    padding-bottom: 0;
+    border-bottom: 1px solid;
   }
 }
 

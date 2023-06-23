@@ -1,6 +1,6 @@
 ---
 id: 4
-group: 4
+group: 6
 title: Academic painting
 date: 2022
 images:

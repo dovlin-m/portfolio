@@ -1,12 +1,10 @@
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator';
+import { defineComponent } from 'vue';
 
-@Component({
-  name: 'atoms-grid-row',
-})
-export default class AtomsGridRow extends Vue {
-}
+export default defineComponent({
+  name: 'AtomsGridRow',
+});
 </script>
 
 <template src="./Row.html" />
-<style src="./Row.scss" lang="scss" scoped></style>
+<style src="./Row.scss" lang="scss" scoped />

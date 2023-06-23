@@ -1,7 +1,7 @@
 ---
 id: 5
-group: 5
-title: Декоративный живопись
+group: 3
+title: Decorative drawing
 date: 2022
 images:
 - 'purple_man'
