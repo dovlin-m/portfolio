@@ -25,8 +25,8 @@ export default defineComponent({
   },
 
   mounted () {
-    // console.log('menu', this.menu);
-    // console.log('locale', this.$i18n.locale);
+    console.log('menu', this.menu);
+    console.log('locale', this.$i18n.locale);
   },
 
   methods: {
