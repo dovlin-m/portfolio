@@ -34,6 +34,10 @@ export default defineComponent({
       this.active = false;
     },
 
+    turnActive () {
+      this.active = !this.active;
+    },
+
     scrollToBottom (id) {
       const item = document.getElementById(id);
 
