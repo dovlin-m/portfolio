@@ -76,6 +76,12 @@ const build = {
     },
   },
 
+  extend(config, { isDev, isClient }) {
+    if (!isDev && isClient) {
+      config.optimization.splitChunks.maxSize = 249856;
+    }
+  },
+
   babel: {
     compact: true,
     presets (_) {
@@ -183,7 +189,7 @@ export default {
   globalName: process.env.npm_package_name,
   server: { port: process.env.PORT, host: process.env.HOST },
   env: process.env,
-  // publicPath: '/portfolio/',
+  publicPath: '/portfolio/',
   publicRuntimeConfig,
 
   head,

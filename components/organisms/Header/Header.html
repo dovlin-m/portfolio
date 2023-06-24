@@ -12,8 +12,8 @@
               :is="locale.code === $i18n.locale ? 'span' : 'nuxt-link'"
               :key="locale.code"
               :href="locale.code === $i18n.locale ? null : menuLocale[locale.code]"
-              :class="{ 'text-bold': locale.code === $i18n.locale }"
               :to="locale.code === $i18n.locale ? null : menuLocale[locale.code]"
+              :class="{ 'text-bold': locale.code === $i18n.locale }"
               class="link-locale link-none text-uppercase text-small"
               v-text="locale.code"
             />
