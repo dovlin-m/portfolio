@@ -25,7 +25,7 @@ jobs:
         run: |
           npm run generate
           git config --global user.name 'dovlin-m'
-          git config --global user.email 'dovlin-m@github.io'
+          git config --global user.email 'dovlin-m@github.com'
           git checkout --orphan gh-pages
           git --work-tree dist add --all
           git --work-tree dist commit -m 'Deploy to GitHub Pages'
