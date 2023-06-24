@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 14
@@ -23,5 +23,11 @@ jobs:
 
       - name: Build and deploy
         run: |
-          npm run build
-          npx gh-pages -d dist
+          npm run generate
+          git config --global user.name 'dovlin-m'
+          git config --global user.email 'dovlin-m@github.io'
+          git checkout --orphan gh-pages
+          git --work-tree dist add --all
+          git --work-tree dist commit -m 'Deploy to GitHub Pages'
+          git push origin HEAD:gh-pages --force
+          rm -r dist
