@@ -37,7 +37,7 @@ const webfontloader = {
 
 const router = {
   linkExactActiveClass: 'active',
-  base: '/',
+  base: '/portfolio/'
 };
 
 const target = 'static';
