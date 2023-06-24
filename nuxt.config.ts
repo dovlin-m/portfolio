@@ -76,7 +76,7 @@ const build = {
     },
   },
 
-  extend(config, { isDev, isClient }) {
+  extend (config, { isDev, isClient }) {
     if (!isDev && isClient) {
       config.optimization.splitChunks.maxSize = 249856;
     }
