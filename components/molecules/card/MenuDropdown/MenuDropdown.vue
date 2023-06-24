@@ -36,6 +36,7 @@ export default defineComponent({
 
     turnActive () {
       this.active = !this.active;
+      console.log('this.active', this.active);
     },
 
     scrollToBottom (id) {

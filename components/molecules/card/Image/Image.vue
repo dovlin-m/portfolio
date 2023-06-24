@@ -27,6 +27,7 @@ export default defineComponent({
   methods: {
     turnActive () {
       this.active = !this.active;
+      console.log('this.active', this.active);
     },
   },
 });
