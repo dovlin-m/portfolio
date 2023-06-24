@@ -1,31 +1,41 @@
-name: Publish
+name: GitHub Pages
 
 on:
   push:
     branches:
-      - master
+      - main
+  pull_request:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  deploy:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build and export Nuxt app
-        run: npx nuxt generate
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Cache dependencies
+        uses: actions/cache@v3
         with:
-          deploy_key: ${{ secrets.NEW_TOKEN }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: npm test
+      - run: npm run generate
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
