@@ -3,6 +3,7 @@ import 'dotenv-defaults/config';
 const dev: boolean = process.env.NODE_ENV !== 'production';
 const baseUrl: string | undefined = dev ? process.env.BASE_URL : `http://${process.env.HOST}:${process.env.PORT}/`;
 
+/*
 const publicRuntimeConfig = {
   PORT: process.env.PORT,
   BASE_URL: baseUrl,
@@ -10,6 +11,7 @@ const publicRuntimeConfig = {
   SOCIALS_EMAIL: process.env.SOCIALS_EMAIL,
   SOCIALS_PHONE: process.env.SOCIALS_PHONE,
 };
+*/
 
 const head = {
   head: {
@@ -38,11 +40,9 @@ const webfontloader = {
 
 const router = {
   linkExactActiveClass: 'active',
-  trailingSlash: true,
+  // trailingSlash: true,
   base: '/portfolio/',
 };
-
-const target = 'static';
 
 const plugins = [
   { src: '@/plugins/i18n' },
@@ -180,17 +180,14 @@ const styleResources = {
 };
 
 export default {
-  ssr: false,
-  debug: dev,
   version: process.env.npm_package_version,
   globalName: process.env.npm_package_name,
-  env: process.env,
-  publicPath: '/portfolio/',
-  publicRuntimeConfig,
+  // publicRuntimeConfig,
 
   head,
+  ssr: false,
+  target: 'static',
   router,
-  target,
 
   webfontloader,
   i18n,
