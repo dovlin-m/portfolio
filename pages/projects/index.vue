@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'PortfolioPage',
+  name: 'ProjectsPage',
 
   data: () => ({
     portfolio: [] as any,
