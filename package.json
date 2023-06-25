@@ -16,6 +16,7 @@
     "@nuxtjs/style-resources": "^1.2.1",
     "cookie-universal-nuxt": "^2.2.2",
     "dotenv-defaults": "^5.0.2",
+    "node-sass": "^9.0.0",
     "nuxt": "^2.15.8",
     "nuxt-viewport": "^1.0.1",
     "nuxt-webfontloader": "^1.1.0"
@@ -45,7 +46,6 @@
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^9.0.0",
-    "node-sass": "^8.0.0",
     "normalize-scss": "^7.0.1",
     "prettier": "^2.7.1",
     "prettier-eslint": "^13.0.0",
