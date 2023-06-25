@@ -185,7 +185,7 @@ export default {
   version: process.env.npm_package_version,
   globalName: process.env.npm_package_name,
   env: process.env,
-  // publicPath: '/portfolio/',
+  publicPath: '/portfolio/',
   publicRuntimeConfig,
 
   head,
