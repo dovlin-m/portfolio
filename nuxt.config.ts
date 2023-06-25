@@ -23,6 +23,7 @@ const head = {
     ],
     link: [
       { rel: 'icon', type: 'Image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
     ],
   },
 };
@@ -30,13 +31,14 @@ const head = {
 const webfontloader = {
   custom: {
     urls: [
-      'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap',
+      'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
     ],
   },
 };
 
 const router = {
   linkExactActiveClass: 'active',
+  trailingSlash: true,
   base: '/portfolio/',
 };
 
