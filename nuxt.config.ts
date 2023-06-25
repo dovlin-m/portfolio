@@ -183,7 +183,7 @@ export default {
   debug: dev,
   version: process.env.npm_package_version,
   globalName: process.env.npm_package_name,
-  server: { port: process.env.PORT, host: process.env.HOST },
+  ssr: false,
   env: process.env,
   publicPath: '/portfolio/',
   publicRuntimeConfig,
@@ -207,4 +207,7 @@ export default {
   compilerOptions,
   buildModules,
   viewport,
+  generate: {
+    routes: ['/', '/ru'],
+  },
 };
