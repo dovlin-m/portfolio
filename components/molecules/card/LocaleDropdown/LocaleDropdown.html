@@ -16,9 +16,9 @@
       <component
         :key="locale.code"
         :is="locale.code === $i18n.locale ? 'span' : 'nuxt-link'"
-        :href="locale.code === $i18n.locale ? null : menuLinks[locale.code]"
         :class="{ 'text-gray-500': locale.code !== $i18n.locale }"
         :to="locale.code === $i18n.locale ? null : menuLinks[locale.code]"
+        :href="locale.code === $i18n.locale ? null : menuLinks[locale.code]"
         class="link-locale link-none text-body d-block text-center py-2 ma-0"
         v-text="locale.name"
       />

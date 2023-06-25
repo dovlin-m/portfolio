@@ -1,7 +1,7 @@
 import 'dotenv-defaults/config';
 
 const dev: boolean = process.env.NODE_ENV !== 'production';
-const baseUrl: string | undefined = dev ? process.env.BASE_URL : `http://${process.env.HOST}:${process.env.PORT}`;
+const baseUrl: string | undefined = dev ? process.env.BASE_URL : `http://${process.env.HOST}:${process.env.PORT}/`;
 
 const publicRuntimeConfig = {
   PORT: process.env.PORT,
@@ -39,7 +39,7 @@ const webfontloader = {
 const router = {
   linkExactActiveClass: 'active',
   trailingSlash: true,
-  base: '/portfolio/',
+  base: '/',
 };
 
 const target = 'static';
@@ -76,12 +76,6 @@ const build = {
         drop_console: !dev,
       },
     },
-  },
-
-  extend (config, { isDev, isClient }) {
-    if (!isDev && isClient) {
-      config.optimization.splitChunks.maxSize = 249856;
-    }
   },
 
   babel: {
@@ -191,7 +185,7 @@ export default {
   globalName: process.env.npm_package_name,
   server: { port: process.env.PORT, host: process.env.HOST },
   env: process.env,
-  publicPath: '/portfolio/',
+  publicPath: '/',
   publicRuntimeConfig,
 
   head,
