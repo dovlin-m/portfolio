@@ -39,7 +39,7 @@ const webfontloader = {
 const router = {
   linkExactActiveClass: 'active',
   trailingSlash: true,
-  base: '/',
+  base: '/portfolio/',
 };
 
 const target = 'static';
@@ -180,12 +180,12 @@ const styleResources = {
 };
 
 export default {
+  ssr: false,
   debug: dev,
   version: process.env.npm_package_version,
   globalName: process.env.npm_package_name,
-  ssr: false,
   env: process.env,
-  publicPath: '/portfolio/',
+  // publicPath: '/portfolio/',
   publicRuntimeConfig,
 
   head,
@@ -207,7 +207,4 @@ export default {
   compilerOptions,
   buildModules,
   viewport,
-  generate: {
-    routes: ['/', '/ru'],
-  },
 };

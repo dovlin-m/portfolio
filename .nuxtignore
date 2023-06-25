@@ -1,0 +1,11 @@
+# ignore page about.vue
+pages/about/index.vue
+
+# ignore page projects.vue
+pages/projects/index.vue
+
+# ignore page inside ignore folder
+pages/projects/_slug.vue
+
+# ignore page resume.vue
+pages/resume/index.vue
